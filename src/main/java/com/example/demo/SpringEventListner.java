@@ -5,7 +5,7 @@ import org.springframework.boot.context.event.ApplicationStartingEvent;
 import org.springframework.context.ApplicationListener;
 
 /**
- * Created by coupang on 2018. 1. 11..
+ * Created by akaroice on 2018. 1. 11..
  */
 @Slf4j
 public class SpringEventListner implements ApplicationListener<ApplicationStartingEvent>{

@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * Created by coupang on 2018. 1. 11..
+ * Created by akaroice on 2018. 1. 11..
  */
 @Controller
 public class DemoViewController {

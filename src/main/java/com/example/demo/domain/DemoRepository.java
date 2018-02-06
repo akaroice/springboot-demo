@@ -1,7 +1,9 @@
 package com.example.demo.domain;
 
+import org.springframework.data.repository.CrudRepository;
+
 /**
- * Created by coupang on 2018. 1. 11..
+ * Created by akaroice on 2018. 1. 11..
  */
-public class DemoRepository {
+public interface DemoRepository extends CrudRepository<DemoEntity, Long> {
 }

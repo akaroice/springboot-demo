@@ -2,14 +2,18 @@ package com.example.demo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
- * Created by coupang on 2018. 1. 11..
+ * Created by akaroice on 2018. 1. 11..
  */
 
 @Getter
 @Setter
-public class Demo {
+@ToString
+public class Demo implements Serializable {
 	private String name;
 	private String version;
 }

@@ -10,6 +10,10 @@ buildscript {
 	}
 }
 
+repositories {
+	mavenCentral()
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -18,17 +22,23 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
-repositories {
-	mavenCentral()
-}
-
-
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-actuator-docs')
-	compile('org.springframework.boot:spring-boot-starter-mustache')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-data-redis')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile('mysql:mysql-connector-java:5.1.40')
+	compile('com.zaxxer:HikariCP:2.6.0')
+	compile('org.flywaydb:flyway-core')
+	compile('joda-time:joda-time:2.9.9')
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+
 	compileOnly('org.projectlombok:lombok')
 	runtime('org.springframework.boot:spring-boot-devtools')
+
+	testCompile group: 'org.easytesting', name: 'fest-assert', version: '1.4'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
